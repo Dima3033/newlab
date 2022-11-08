@@ -26,13 +26,16 @@ print(f'Sum even:{sum_list[1]}')
 print(f'Sum odd:{sum_list[2]}')
 print(f'Nul even:{nul}')
 
-number = int(input('Enter -> '))
-number = str(number)
-num_1 = int(number[0])
-num_2 = int(number[-1])
-add = num_1 + num_2
-print('Додавання першої та останньої цифри числа є', add)
-
+nul = 1
+start_index = my_list.index(min(my_list))
+end_index = my_list.index(min(my_list))
+if start_index > end_index:
+    start_index, end_index = end_index, start_index
+print(f'start_index = {start_index}, end_index = {end_index}')
+for i in range(start_index+1, end_index):
+    print(f'{my_list[i]}', end=' ')
+    nul += my_list[i]
+print(f'\n Nul = {nul}')
 
 
 
