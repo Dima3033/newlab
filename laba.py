@@ -27,8 +27,12 @@ print(f'Sum odd:{sum_list[2]}')
 print(f'Nul even:{nul}')
 
 nul = 1
-start_index = my_list.index(min(my_list))
-end_index = my_list.index(min(my_list))
+start_index = end_index = 0
+for i in range(0, len(my_list)):
+    if start_index > my_list[i] > 0:
+        start_index = i
+    if end_index < my_list[i] < 0:
+        end_index[i] += 1
 if start_index > end_index:
     start_index, end_index = end_index, start_index
 print(f'start_index = {start_index}, end_index = {end_index}')
